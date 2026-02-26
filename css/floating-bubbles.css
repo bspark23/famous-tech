@@ -1,0 +1,284 @@
+/* Floating Contact Bubbles */
+.floating-bubbles-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* WhatsApp Bubble */
+.whatsapp-bubble {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-bubble i {
+    color: white;
+    font-size: 28px;
+}
+
+/* Email Bubble */
+.email-bubble {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(234, 67, 53, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite 0.5s;
+}
+
+.email-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(234, 67, 53, 0.6);
+}
+
+.email-bubble i {
+    color: white;
+    font-size: 26px;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* WhatsApp Modal */
+.whatsapp-modal {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-modal.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.whatsapp-modal-header {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.whatsapp-modal-header h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.whatsapp-modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.whatsapp-modal-close:hover {
+    transform: rotate(90deg);
+}
+
+.whatsapp-modal-body {
+    padding: 20px;
+}
+
+.whatsapp-modal-body label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.whatsapp-modal-body textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.whatsapp-modal-body textarea:focus {
+    outline: none;
+    border-color: #25D366;
+}
+
+.whatsapp-send-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.whatsapp-send-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+/* Email Menu */
+.email-menu {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.email-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.email-menu-item {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 1px solid #f0f0f0;
+    text-decoration: none;
+    color: #333;
+}
+
+.email-menu-item:last-child {
+    border-bottom: none;
+}
+
+.email-menu-item:hover {
+    background: #f8f9fa;
+    padding-left: 25px;
+}
+
+.email-menu-item i {
+    color: #EA4335;
+    font-size: 18px;
+}
+
+.email-menu-item span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .floating-bubbles-container {
+        bottom: 20px;
+        right: 20px;
+        gap: 12px;
+    }
+
+    .whatsapp-bubble,
+    .email-bubble {
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-bubble i {
+        font-size: 24px;
+    }
+
+    .email-bubble i {
+        font-size: 22px;
+    }
+
+    .whatsapp-modal {
+        width: calc(100vw - 40px);
+        right: 20px;
+        bottom: 90px;
+    }
+
+    .email-menu {
+        width: 280px;
+        right: 20px;
+        bottom: 90px;
+    }
+}
+
+/* Fade-in animation on page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floating-bubbles-container {
+    animation: fadeInUp 0.6s ease-out 0.5s both;
+}

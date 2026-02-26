@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Test - Floating Bubbles</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <style>
+        /* Floating Contact Bubbles */
+        .floating-bubbles-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .whatsapp-bubble {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-bubble:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-bubble i {
+            color: white;
+            font-size: 28px;
+        }
+
+        .email-bubble {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(234, 67, 53, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .email-bubble:hover {
+            transform: scale(1.1);
+        }
+
+        .email-bubble i {
+            color: white;
+            font-size: 26px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inline Test - If you see two colored circles in the bottom-right, it's working!</h1>
+    <p>Green = WhatsApp, Red = Email</p>
+
+    <!-- Floating Bubbles -->
+    <div class="floating-bubbles-container">
+        <div class="whatsapp-bubble" onclick="alert('WhatsApp bubble clicked!')">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="email-bubble" onclick="alert('Email bubble clicked!')">
+            <i class="fas fa-envelope"></i>
+        </div>
+    </div>
+</body>
+</html>
