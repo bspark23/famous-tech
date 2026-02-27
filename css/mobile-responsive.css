@@ -13,6 +13,25 @@
         padding: 15px 20px !important;
         background: var(--bs-white) !important;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+    
+    /* Logo and text on the left */
+    .navbar-brand {
+        display: flex !important;
+        align-items: center !important;
+        flex: 0 1 auto !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Hamburger menu on the far RIGHT side */
+    .navbar-toggler {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        flex-shrink: 0 !important;
     }
     
     .navbar-brand h5 {
@@ -24,7 +43,7 @@
         max-height: 45px !important;
     }
     
-    /* Hamburger Menu Button */
+    /* Hamburger Menu Button - Move to right */
     .mobile-menu-toggle {
         display: flex;
         flex-direction: column;
@@ -249,6 +268,32 @@
         font-size: 14px !important;
     }
     
+    /* Fix carousel navigation buttons on mobile - prevent overlap with content */
+    .header-carousel .owl-nav .owl-prev,
+    .header-carousel .owl-nav .owl-next {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 18px !important;
+        bottom: 15px !important;
+        z-index: 10 !important;
+    }
+    
+    .header-carousel .owl-nav .owl-prev {
+        left: 15px !important;
+        margin-left: 0 !important;
+        transform: none !important;
+    }
+    
+    .header-carousel .owl-nav .owl-next {
+        left: 70px !important;
+        transform: none !important;
+    }
+    
+    /* Ensure carousel caption buttons don't overlap with nav buttons */
+    .header-carousel .carousel-caption .d-flex {
+        margin-bottom: 70px !important;
+    }
+    
     /* Mobile Stats Counter */
     .stats-counter .stats-item h2 {
         font-size: 32px !important;
@@ -274,21 +319,103 @@
         margin-bottom: 20px;
     }
     
+    /* Mobile Safety & Compliance Section */
+    .safety-compliance {
+        padding: 3rem 0 !important;
+    }
+    
+    /* Mobile 3D Badges */
+    .badge-3d {
+        height: 180px !important;
+        margin-bottom: 20px;
+    }
+    
+    .badge-front,
+    .badge-back {
+        padding: 15px !important;
+    }
+    
+    .badge-front i {
+        font-size: 2.5rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .badge-front h5 {
+        font-size: 1rem !important;
+    }
+    
+    .badge-back p {
+        font-size: 0.9rem !important;
+    }
+    
     /* Mobile Timeline */
+    .timeline-container {
+        margin: 30px 0 !important;
+    }
+    
     .timeline {
-        padding-left: 20px;
+        padding: 20px 0 !important;
+        padding-left: 0 !important;
+    }
+    
+    .timeline::before {
+        left: 30px !important;
     }
     
     .timeline-item {
-        padding-left: 40px;
+        width: 100% !important;
+        left: 0 !important;
+        text-align: left !important;
+        padding: 15px 20px 15px 70px !important;
     }
     
     .timeline-item::before {
-        left: 0;
+        left: 70px !important;
+        top: -25px !important;
+        font-size: 1rem !important;
     }
     
     .timeline-dot {
-        left: -5px;
+        left: 20px !important;
+        right: auto !important;
+        width: 16px !important;
+        height: 16px !important;
+        top: 25px !important;
+    }
+    
+    .timeline-content {
+        padding: 15px !important;
+    }
+    
+    .timeline-content::before {
+        display: none !important;
+    }
+    
+    .timeline-content h5 {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .timeline-content p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Mobile Compliance Stats */
+    .compliance-stat {
+        padding: 20px !important;
+        margin-bottom: 20px;
+    }
+    
+    .compliance-stat i {
+        font-size: 2rem !important;
+    }
+    
+    .compliance-stat h2 {
+        font-size: 2rem !important;
+    }
+    
+    .compliance-stat p {
+        font-size: 0.9rem !important;
     }
     
     /* Mobile FAQ */
@@ -305,6 +432,55 @@
     /* Mobile Team */
     .team-item {
         margin-bottom: 30px;
+    }
+    
+    /* Fix team image overlapping on mobile */
+    .team .team-item .team-img {
+        margin-top: 0 !important;
+        transform: translateY(0) !important;
+        margin-bottom: 0 !important;
+        width: 200px !important;
+        height: 200px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .team-item .team-img img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    .team-item .team-title {
+        padding: 20px 15px !important;
+    }
+    
+    .team-item .team-title h4 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    
+    .team-item .team-title p {
+        font-size: 0.9rem;
+    }
+    
+    /* Ensure team section heading is visible */
+    .team .text-center {
+        margin-bottom: 30px !important;
+        padding: 0 15px;
+    }
+    
+    .team .text-center h4 {
+        font-size: 1.2rem !important;
+    }
+    
+    .team .text-center h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    /* Fix team item padding on mobile */
+    .team .team-item {
+        padding: 20px 15px !important;
     }
     
     /* Mobile Footer */
@@ -431,6 +607,56 @@
     .btn-lg {
         padding: 10px 20px !important;
         font-size: 14px !important;
+    }
+    
+    /* Small mobile - Safety & Compliance */
+    .badge-3d {
+        height: 160px !important;
+    }
+    
+    .badge-front i {
+        font-size: 2rem !important;
+    }
+    
+    .badge-front h5 {
+        font-size: 0.9rem !important;
+    }
+    
+    .timeline-item {
+        padding: 10px 15px 10px 60px !important;
+    }
+    
+    .timeline::before {
+        left: 25px !important;
+    }
+    
+    .timeline-dot {
+        left: 17px !important;
+        width: 14px !important;
+        height: 14px !important;
+    }
+    
+    .timeline-item::before {
+        left: 60px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .compliance-stat h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    /* Small mobile - Team */
+    .team .team-item .team-img {
+        width: 180px !important;
+        height: 180px !important;
+    }
+    
+    .team-item .team-title h4 {
+        font-size: 1rem !important;
+    }
+    
+    .team-item .team-title p {
+        font-size: 0.85rem !important;
     }
 }
 

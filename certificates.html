@@ -33,6 +33,25 @@
 
         <!-- Floating Bubbles Stylesheet -->
         <link href="css/floating-bubbles.css" rel="stylesheet">
+
+        <!-- Mobile Responsive Stylesheet -->
+        <link href="css/mobile-responsive.css" rel="stylesheet">
+
+        <style>
+            .hover-lift {
+                transition: all 0.3s ease;
+            }
+            .hover-lift:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+            }
+            .certificate-card {
+                border: 1px solid #e9ecef;
+            }
+            .certificate-card:hover {
+                border-color: var(--bs-primary);
+            }
+        </style>
     </head>
 
     <body>
@@ -82,7 +101,7 @@
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
                     <img src="img/fam1.jpg" alt="Famous Technology Logo" style="max-height: 60px;">
-                    <h5 class="text-primary mb-0 ms-3">Famous Technology and Industrial Services Limited</h5>
+                    <h4 class="text-primary mb-0 ms-3 fw-bold">Famous Technology and Industrial Services Ltd</h4>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -132,48 +151,74 @@
                 </div>
                 
                 <div class="row g-4 justify-content-center">
-                    <!-- Certificate 1 -->
-                    <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="certificate-card h-100 bg-white rounded shadow-sm p-5 text-center">
-                            <div class="certificate-icon mb-4">
-                                <i class="fas fa-certificate fa-5x text-primary"></i>
+                    <!-- Certificate 1: CAC Certificate -->
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="certificates/CAC Certificate.pdf" target="_blank" class="text-decoration-none">
+                            <div class="certificate-card h-100 bg-white rounded shadow-sm p-4 text-center hover-lift">
+                                <div class="certificate-icon mb-3">
+                                    <i class="fas fa-file-pdf fa-4x text-danger"></i>
+                                </div>
+                                <h5 class="mb-3 text-dark">CAC Certificate</h5>
+                                <p class="text-muted small mb-3">Corporate Affairs Commission Registration Certificate</p>
+                                <span class="btn btn-outline-primary btn-sm">View Certificate <i class="fas fa-external-link-alt ms-1"></i></span>
                             </div>
-                            <h3 class="mb-3">LEEA Certified Inspectors</h3>
-                            <p class="text-muted mb-0">Our inspection team holds certifications from the Lifting Equipment Engineers Association (LEEA), ensuring world-class expertise in lifting equipment inspection and examination.</p>
-                        </div>
+                        </a>
                     </div>
                     
-                    <!-- Certificate 2 -->
-                    <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="certificate-card h-100 bg-white rounded shadow-sm p-5 text-center">
-                            <div class="certificate-icon mb-4">
-                                <i class="fas fa-award fa-5x text-primary"></i>
+                    <!-- Certificate 2: DPR Lifting Equipment Permit -->
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="certificates/DPR Lifting Equipment Permit.pdf" target="_blank" class="text-decoration-none">
+                            <div class="certificate-card h-100 bg-white rounded shadow-sm p-4 text-center hover-lift">
+                                <div class="certificate-icon mb-3">
+                                    <i class="fas fa-file-pdf fa-4x text-danger"></i>
+                                </div>
+                                <h5 class="mb-3 text-dark">DPR Lifting Equipment Permit</h5>
+                                <p class="text-muted small mb-3">Department of Petroleum Resources Lifting Equipment Certification</p>
+                                <span class="btn btn-outline-primary btn-sm">View Certificate <i class="fas fa-external-link-alt ms-1"></i></span>
                             </div>
-                            <h3 class="mb-3">ASNT Level II Certified Personnel</h3>
-                            <p class="text-muted mb-0">Our NDT technicians are certified by the American Society for Nondestructive Testing (ASNT) at Level II, demonstrating advanced competency in non-destructive testing methods.</p>
-                        </div>
+                        </a>
                     </div>
                     
-                    <!-- Certificate 3 -->
+                    <!-- Certificate 3: DPR Pressure Testing Permit -->
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="certificates/DPR Pressure Testing Permit.pdf" target="_blank" class="text-decoration-none">
+                            <div class="certificate-card h-100 bg-white rounded shadow-sm p-4 text-center hover-lift">
+                                <div class="certificate-icon mb-3">
+                                    <i class="fas fa-file-pdf fa-4x text-danger"></i>
+                                </div>
+                                <h5 class="mb-3 text-dark">DPR Pressure Testing Permit</h5>
+                                <p class="text-muted small mb-3">Department of Petroleum Resources Pressure Testing Certification</p>
+                                <span class="btn btn-outline-primary btn-sm">View Certificate <i class="fas fa-external-link-alt ms-1"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Certificate 4: ISO 9001 Certificate -->
+                    <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a href="certificates/ISO 9001 CERTIFICATE - FAMOUS TECHNOLOGY AN INDUSTRIAL SERVICES LTD.pdf" target="_blank" class="text-decoration-none">
+                            <div class="certificate-card h-100 bg-white rounded shadow-sm p-4 text-center hover-lift">
+                                <div class="certificate-icon mb-3">
+                                    <i class="fas fa-file-pdf fa-4x text-danger"></i>
+                                </div>
+                                <h5 class="mb-3 text-dark">ISO 9001 Certificate</h5>
+                                <p class="text-muted small mb-3">ISO 9001 Quality Management System Certification for Famous Technology and Industrial Services Ltd</p>
+                                <span class="btn btn-outline-primary btn-sm">View Certificate <i class="fas fa-external-link-alt ms-1"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Certificate 5: NDT Permit -->
                     <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="certificate-card h-100 bg-white rounded shadow-sm p-5 text-center">
-                            <div class="certificate-icon mb-4">
-                                <i class="fas fa-check-circle fa-5x text-primary"></i>
+                        <a href="certificates/NDT_Permit_FAMOUS_PERMIT_2026_NUPRC_280717_ONSHORE_PIPELINE_LAYING.pdf" target="_blank" class="text-decoration-none">
+                            <div class="certificate-card h-100 bg-white rounded shadow-sm p-4 text-center hover-lift">
+                                <div class="certificate-icon mb-3">
+                                    <i class="fas fa-file-pdf fa-4x text-danger"></i>
+                                </div>
+                                <h5 class="mb-3 text-dark">NDT Permit 2026</h5>
+                                <p class="text-muted small mb-3">NUPRC Non-Destructive Testing Permit for Onshore Pipeline Laying</p>
+                                <span class="btn btn-outline-primary btn-sm">View Certificate <i class="fas fa-external-link-alt ms-1"></i></span>
                             </div>
-                            <h3 class="mb-3">ISO 9001 Compliance</h3>
-                            <p class="text-muted mb-0">We maintain ISO 9001 Quality Management System compliance, ensuring consistent delivery of high-quality services that meet customer and regulatory requirements.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Certificate 4 -->
-                    <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="certificate-card h-100 bg-white rounded shadow-sm p-5 text-center">
-                            <div class="certificate-icon mb-4">
-                                <i class="fas fa-shield-alt fa-5x text-primary"></i>
-                            </div>
-                            <h3 class="mb-3">Federal Ministry of Labour Certification</h3>
-                            <p class="text-muted mb-0">Certified by the Federal Ministry of Labour, we comply with all local regulatory requirements for industrial inspection and safety services in Nigeria.</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 
@@ -206,9 +251,9 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="footer-item">
-                            <a href="index.html" class="p-0">
-                                <h4 class="text-white"><i class="fas fa-search-dollar me-3"></i>Stocker</h4>
-                                <!-- <img src="img/logo.png" alt="Logo"> -->
+                            <a href="index.html" class="p-0 d-flex align-items-center mb-3">
+                                <img src="img/fam1.jpg" alt="Famous Technology Logo" style="max-height: 50px; border-radius: 5px;">
+                                <h5 class="text-white mb-0 ms-3">Famous Technology</h5>
                             </a>
                             <p class="mb-4">Famous Technology & Industrial Services Limited is a fully registered Nigerian company established on September 22, 2008. We specialize in Lifting Equipment Inspection, Non-Destructive Testing (NDT), QA/QC services, and industrial manpower supply.</p>
                             <div class="d-flex">
@@ -225,7 +270,7 @@
                             <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
                             <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
                             <a href="certificates.html"><i class="fas fa-angle-right me-2"></i> Certificates</a>
-                            <a href="team.html"><i class="fas fa-angle-right me-2"></i> Our Team</a>
+                            
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
@@ -237,17 +282,21 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item">
                             <h4 class="text-white mb-4">Contact Info</h4>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                                <p class="text-white mb-0">123 Street New York.USA</p>
+                            <div class="d-flex align-items-start mb-3">
+                                <i class="fas fa-map-marker-alt text-primary me-3 mt-1"></i>
+                                <p class="text-white mb-0">Plot 22 Second Avenue Crescent, Egbelu, Port Harcourt, Rivers State</p>
                             </div>
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center mb-3">
                                 <i class="fas fa-envelope text-primary me-3"></i>
-                                <p class="text-white mb-0">info@example.com</p>
+                                <p class="text-white mb-0">famoustechnq@gmail.com</p>
                             </div>
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center mb-3">
                                 <i class="fa fa-phone-alt text-primary me-3"></i>
                                 <p class="text-white mb-0">+234 9067004758</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-certificate text-primary me-3"></i>
+                                <p class="text-white mb-0">RC: 774808</p>
                             </div>
                             
                             
@@ -277,6 +326,9 @@
 
         <!-- Floating Bubbles Javascript -->
         <script src="js/floating-bubbles.js"></script>
+
+        <!-- Mobile Menu Javascript -->
+        <script src="js/mobile-menu.js"></script>
     </body>
 
 </html>
